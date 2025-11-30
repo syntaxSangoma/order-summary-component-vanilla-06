@@ -92,7 +92,7 @@ body {
     background-image: url("./images/pattern-background-mobile.svg");
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 100% auto;
+    background-size: 100% 50%;
 }
 
 

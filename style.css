@@ -218,7 +218,7 @@ a:focus {
 @media screen and (min-width: 992px) {
     body {
         background-image: url("./images/pattern-background-desktop.svg");
-        background-size: 100% 50%;
+        background-size: 100% 48.56%;
     }
 
     .order-summary-card {

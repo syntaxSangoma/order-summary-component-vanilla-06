@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nkosinathi Dhanda">
+    <meta name="description" content="A clean, responsive Order Summary component built using vanilla HTML and CSS.
+">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary Component</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Syntax-Sangoma-Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <main class="order-summary-card">
+        <figure class="order-summary-card__hero-image">
+            <img src="./images/illustration-hero.svg" alt="illustration-hero" width="450" height="220">
+            <figcaption class="offscreen">illustration-hero</figcaption>
+        </figure>
+
+        <section class="order-summary-card__content">
+            <h1 class="order-summary-card__title center">Order Summary</h1>
+
+            <p class="order-summary-card__description center">
+                You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+            </p>
+
+            <div class="order-summary-card__bouquet-group">
+                <div class="order-summary-card__bouquet">
+                    <figure class="order-summary-card__music-icon">
+                        <img src="./images/icon-music.svg" alt="icon-music" width="48" height="48">
+                        <figcaption class="offscreen">icon-music</figcaption>
+                    </figure>
+
+                    <div class="order-summary-card__bouquet-duration">
+                        <h3 class="order-summary-card__bouquet-title nowrap">Annual Plan</h3>
+                        <p class="order-summary-card__bouquet-price nowrap">
+                            &dollar;59.99/year
+                        </p>
+                    </div>
+                </div>
+
+                <a href="#" class="order-summary-card__change-bouquet nowrap">Change</a>
+            </div>
+
+            <div class="order-summary-card__button-group">
+                <button class="order-summary-card__pay-button nowrap center">
+                    Proceed to Payment
+                </button>
+
+                <button class="order-summary-card__cancel-button nowrap center">
+                    Cancel Order
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

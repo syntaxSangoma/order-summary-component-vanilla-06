@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* || REST */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLORS */
+    --MAIN-BG: #E0E8FF;
+    --CARD-BG: #FFF;
+    --TITLE-CLR: #1F2E55;
+    --DESCRIPTION-CLR: #717FA6;
+    --BOUQUET-CARD-BG: #F7F9FF;
+    --BOUQUET-TITLE-CLR: #1F2E55;
+    --BOUQUET-PRICE-CLR: #717FA6;
+    --CHANGE-LINK-CLR: #382AE1;
+    --PAY-BUTTON-BG: #382AE1;
+    --PAY-BUTTON-CLR: #FFF;
+    --CANCEL-BUTTON-CLR: #717FA6;
+
+    /* HOVER COLORS */
+    --CHANGE-LINK-CLR-HVR: #766CF1;
+    --PAY-BUTTON-BG-HVR: #766CF1;
+    --CANCEL-BUTTON-CLR-HVR: #1F2E55;
+
+    /* SHADOWS */
+    --CARD-SHADOW: 0px 40px 40px -20px hsla(228, 87%, 40%, 0.1518);
+    --BUTTON-SHADOW: 0px 20px 20px 0px hsla(245, 75%, 52%, 0.1903);
+
+    /* TYPOGRAPHY */
+    --FF: "Red Hat Display", sans-serif;
+
+    /* TYPOGRAPHY - SHARED */
+    --BUTTON-SHARED: 900 .9375rem var(--FF);
+
+    /* TYPOGRAPHY - MOBILE */
+    --TITLE-MOB: 900 1.375rem var(--FF);
+    --DESCRIPTION-MOB: 500 .9375rem/1.5625rem var(--FF);
+    --BOUQUET-TITLE-MOB: 900 .875rem var(--FF);
+    --BOUQUET-PRICE-MOB: 500 .875rem var(--FF);
+    --CHANGE-LINK-MOB: bold .8125rem var(--FF);
+
+    /* TYPOGRAPHY - DESKTOP */
+    --TITLE-DSK: 900 1.75rem var(--FF);
+    --DESCRIPTION-DSK: 500 1rem/1.625rem var(--FF);
+    --BOUQUET-TITLE-DSK: 900 1rem var(--FF);
+    --BOUQUET-PRICE-DSK: 500 1rem var(--FF);
+    --CHANGE-LINK-DSK: bold .875rem var(--FF);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+.responsive-image {
+    display: none;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--MAIN-BG);
+    display: grid;
+    place-content: center;
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+
+h1,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+a:focus {
+    outline: none;
+}
+
+/* ORDER SUMMARY CARD */
+.order-summary-card {
+    width: 327px;
+    min-height: 567px;
+    background-color: var(--CARD-BG);
+    box-shadow: var(--CARD-SHADOW);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto 1.5rem;
+}
+
+.order-summary-card__hero-image {
+    width: 327px;
+    height: 160px;
+}
+
+.order-summary-card__hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-summary-card__content {
+    padding: 2rem 1.5rem;
+}
+
+.order-summary-card__title {
+    font: var(--TITLE-MOB);
+    color: var(--TITLE-CLR);
+    margin-bottom: 1rem;
+}
+
+.order-summary-card__description {
+    font: var(--DESCRIPTION-MOB);
+    color: var(--DESCRIPTION-CLR);
+    margin-bottom: 1.5rem;
+    max-width: 263px;
+}
+
+.order-summary-card__bouquet-group {
+    width: 279px;
+    height: 81px;
+    background-color: var(--BOUQUET-CARD-BG);
+    padding: 1.0625rem 1rem 1rem 1rem;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 3.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.order-summary-card__bouquet {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.order-summary-card__music-icon img {
+    max-width: 48px;
+}
+
+.order-summary-card__bouquet-title {
+    margin-bottom: .1875rem;
+    font: var(--BOUQUET-TITLE-MOB);
+    color: var(--BOUQUET-TITLE-CLR);
+}
+
+.order-summary-card__bouquet-price {
+    font: var(--BOUQUET-PRICE-MOB);
+    color: var(--BOUQUET-PRICE-CLR);
+}
+
+.order-summary-card__change-bouquet:any-link {
+    text-decoration-color: var(--CHANGE-LINK-CLR);
+    color: var(--CHANGE-LINK-CLR);
+    font: var(--CHANGE-LINK-MOB);
+    text-underline-offset: 4.25px;
+    text-decoration-thickness: 1.25px;
+}
+
+.order-summary-card__button-group {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.order-summary-card__pay-button {
+    width: 279px;
+    height: 50px;
+    background-color: var(--PAY-BUTTON-BG);
+    color: var(--PAY-BUTTON-CLR);
+    padding: 0px 4.0625rem 0rem 4rem;
+    line-height: 3.125rem;
+    font: var(--BUTTON-SHARED);
+    border: none;
+    border-radius: 11px;
+    box-shadow: var(--BUTTON-SHADOW);
+}
+
+.order-summary-card__cancel-button {
+    color: var(--CANCEL-BUTTON-CLR);
+    font: var(--BUTTON-SHARED);
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+
+    .order-summary-card {
+        width: 450px;
+        min-height: 697px;
+        margin: auto 30.9375rem;
+    }
+
+    .order-summary-card__hero-image {
+        width: 450px;
+        height: 220px;
+    }
+
+    .order-summary-card__content {
+        padding: 2.8125rem 3rem 3rem 3rem;
+    }
+
+    .order-summary-card__title {
+        font: var(--TITLE-DSK);
+        margin-bottom: 1.0625rem;
+    }
+
+    .order-summary-card__description {
+        font: var(--DESCRIPTION-DSK);
+        margin-bottom: 1.25rem;
+        max-width: 354px;
+    }
+
+    .order-summary-card__bouquet-group {
+        width: 354px;
+        height: 98px;
+        padding: 1.5625rem 1.5rem;
+        gap: 5.875rem;
+        margin-bottom: 2rem;
+    }
+
+    .order-summary-card__bouquet-title {
+        margin-bottom: .375rem;
+        font: var(--BOUQUET-TITLE-DSK);
+    }
+
+    .order-summary-card__bouquet-price {
+        font: var(--BOUQUET-PRICE-DSK);
+    }
+
+    .order-summary-card__change-bouquet:any-link {
+        transition: color 0.5s ease, text-decoration-color 0.5s ease;
+        font: var(--CHANGE-LINK-DSK);
+        cursor: pointer;
+    }
+
+    .order-summary-card__change-bouquet:hover {
+        color: var(--CHANGE-LINK-CLR-HVR);
+        text-decoration-color: transparent;
+    }
+
+    .order-summary-card__button-group {
+        gap: 2rem;
+    }
+
+    .order-summary-card__pay-button {
+        width: 354px;
+        padding: 0px 6.375rem;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
+    }
+
+    .order-summary-card__pay-button:hover {
+        background-color: var(--PAY-BUTTON-BG-HVR);
+    }
+
+    .order-summary-card__cancel-button {
+        transition: color 0.5s ease;
+        cursor: pointer;
+    }
+
+    .order-summary-card__cancel-button:hover {
+        color: var(--CANCEL-BUTTON-CLR-HVR);
+    }
+}

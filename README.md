@@ -1,87 +1,82 @@
-# NFT Preview Card (Vanilla Web)
+# Order Summary Component (Vanilla Web)
 
-A clean, responsive NFT Preview Card component built using vanilla HTML and CSS.
+A clean, responsive Order Summary card component built using vanilla HTML and CSS. This small component demonstrates a compact purchase summary UI with a hero illustration, plan details, and primary/cancel actions.
 
-![NFT Preview Card](./images/active-states.jpg)
+![Order Summary Component](./images/active-states.jpg)
 
 ## Key Features & Benefits
 
-- **Clean and Simple:** Built using only vanilla HTML and CSS for a lightweight, dependency-free component.
-- **Responsive Design:** Mobile-first approach with optimized layouts for both mobile and desktop viewports.
-- **Smooth Interactions:** GPU-accelerated hover animations with opacity and transform effects for a polished feel.
-- **Accessible:** Semantic HTML structure and keyboard-navigable links.
-- **Easy to Integrate:** Drop the `index.html`, `style.css`, and the `images/` folder into any project—no build step required.
-- **Customizable:** Simple class structure lets you change copy, images, and styles quickly.
+- **Mobile-first & Responsive:** Designed for small screens first with a desktop breakpoint at `992px`.
+- **Simple Markup:** Uses semantic HTML and a focused class structure (`.order-summary-card`, `.order-summary-card__bouquet`, etc.).
+- **Customizable Styles:** Uses CSS custom properties in `style.css` for colors, typography, and shadows.
+- **Accessible:** Keyboard-focusable controls and semantic elements for better accessibility.
+- **No Dependencies:** Vanilla HTML and CSS — drop the files into any project and open `index.html`.
 
-## Prerequisites & Dependencies
+## Visual Overview
 
-- A web browser (Chrome, Firefox, Safari, Edge) to view the component.
+- Hero illustration: `./images/illustration-hero.svg`
+- Active/state preview: `./images/active-states.jpg` (used above)
+- Icon shown in plan: `./images/icon-music.svg`
+
+## Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, Edge).
 - A text editor or IDE to edit `index.html` and `style.css` (e.g., VS Code).
-- (Optional) A local server for consistent asset loading (VS Code Live Server).
+- (Optional) A local server for consistent asset loading (e.g., `python -m http.server`).
 
-## Installation & Setup Instructions
+## Installation & Setup
 
-1. **Clone or download the repository** (or copy the project folder locally):
-
-```bash
-git clone https://github.com/syntaxSangoma/nft-preview-card-vanilla-05
-```
+1. **Clone or download this repository**:
 
 ```bash
-cd nft-preview-card-vanilla-05
+git clone https://github.com/syntaxSangoma/order-summary-component-vanilla-06.git
 ```
 
-2. **Open the project** in your editor and open `index.html` in the browser:
-
-- Double-click `index.html` or open it from your editor.
-- Or serve the folder using a simple local server (recommended for consistent image loading)
-
-## Usage Examples
-
-The component is a product card template. To customize, edit `index.html`:
-
-- Replace the NFT image at `./images/image-equilibrium.jpg` with your own artwork.
-- Update the NFT title, description, and pricing in the `.nft-card__title` and `.nft-card__description` markup.
-- Change the avatar image at `./images/image-avatar.png` and author name in `.nft-card__author-name`.
-- Update the ETH price and time remaining in the `.nft-card__currency` and `.nft-card__time` sections.
-
-Example: to update the NFT price, find the `.nft-card__currency` section and replace the value:
-
-```html
-<div class="nft-card__currency">
-	<img src="./images/icon-ethereum.svg" alt="" class="nft-card__eth-icon">
-	<span>0.405 ETH</span>  <!-- Update this value -->
-</div>
+```bash
+cd order-summary-component-vanilla-06
 ```
 
-## Configuration Options
+2. **Open the project**:
 
-Most visual changes live in `style.css`. Typical customizations:
+- Double-click `index.html` to open in your browser, or
+- Serve the folder for consistent asset loading (recommended)
 
-- **Colors & Palette:** Edit CSS custom properties (variables) at the top of `style.css` under `:root`:
-	- `--CYAN` for accent/hover color
-	- `--SOFT-BLUE` for secondary text
-	- `--MAIN-BG` for background
-  
-- **Typography:** Change the `--FF` font import or replace with a different Google Font in the `@import` statement.
+## Usage & Customization
 
-- **Card Size & Spacing:** Adjust `.nft-card` width, padding, and inner element dimensions to fit your layout.
+The layout is simple — edit `index.html` and `style.css` to customize content or visuals.
 
-- **Animations & Hover Effects:** Modify transition durations and transform scales in the `@media (min-width: 992px)` section:
-	- Change `250ms` to adjust animation speed
-	- Replace `ease` with `cubic-bezier(...)` for custom easing curves
-	- Adjust `scale(0.98)` and `scale(0.9)` for different grow/shrink effects
+- Change the hero image: replace `./images/illustration-hero.svg`.
+- Update the plan name and price in the markup:
+  - Plan title: `.order-summary-card__bouquet-title` (e.g., "Annual Plan")
+  - Price: `.order-summary-card__bouquet-price` (e.g., "$59.99/year")
+- Replace the plan icon: `./images/icon-music.svg`.
+- Button text is in `index.html`: `.order-summary-card__pay-button` and `.order-summary-card__cancel-button`.
 
-- **Responsive Breakpoints:** The mobile design applies by default; desktop styles activate at `992px` and above. Adjust this breakpoint to match your needs.
+Example: to change the plan price, edit the `.order-summary-card__bouquet-price` element in `index.html`.
 
-## Contributing Guidelines
+## Styling & Configuration Options
+
+Most visual settings are exposed as CSS variables at the top of `style.css` under `:root`. Useful variables you can tweak:
+
+- **Colors:** `--MAIN-BG`, `--CARD-BG`, `--TITLE-CLR`, `--DESCRIPTION-CLR`, `--PAY-BUTTON-BG`, `--CHANGE-LINK-CLR`.
+- **Shadows:** `--CARD-SHADOW`, `--BUTTON-SHADOW`.
+- **Typography:** `--FF` (font family), `--TITLE-MOB`, `--DESCRIPTION-MOB`, `--BUTTON-SHARED`.
+
+To change the look globally, edit these variables or adjust the mobile/desktop font variables.
+
+## Accessibility Notes
+
+- Buttons and links are keyboard-focusable. You can enhance focus visibility by adding `:focus` styles in `style.css`.
+- Images include `alt` attributes; decorative images use offscreen captions for screen-readers.
+
+## Contributing
 
 Contributions are welcome. Suggested flow:
 
 1. Fork the repository.
-2. Create a feature branch (e.g., `feature/dark-mode`, `feature/animation-speed`).
-3. Make changes with focused commits.
-4. Push to your fork and open a pull request describing your changes.
+2. Create a descriptive branch (e.g., `feature/dark-mode`).
+3. Make small, focused commits.
+4. Push to your fork and open a pull request.
 
 ## License
 
@@ -89,4 +84,4 @@ License not specified.
 
 ## Acknowledgments
 
-- Google Fonts for the `Red Hat Display` font family used in this project.
+- Google Fonts for the `Red Hat Display` font used in `style.css`.

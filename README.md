@@ -17,7 +17,7 @@ A clean, responsive NFT Preview Card component built using vanilla HTML and CSS.
 
 - A web browser (Chrome, Firefox, Safari, Edge) to view the component.
 - A text editor or IDE to edit `index.html` and `style.css` (e.g., VS Code).
-- (Optional) A local server for consistent asset loading (e.g., `python -m http.server` or VS Code Live Server).
+- (Optional) A local server for consistent asset loading (VS Code Live Server).
 
 ## Installation & Setup Instructions
 
@@ -89,4 +89,4 @@ License not specified.
 
 ## Acknowledgments
 
-- Google Fonts for the `Outfit` font family used in this project.
+- Google Fonts for the `Red Hat Display` font family used in this project.
